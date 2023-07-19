@@ -1,1 +1,2 @@
-alert("wow!@@!!!!");
+import './styles/style.css';
+
