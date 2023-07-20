@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root {
+    --light: #e2e8f0;
+    --dark: rgb(46, 46, 46);
+    --cream: #FFFDD0;
+    --gold: #d4a13b;
+    --gold-light: #d8c194;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ======================================================= */
+/* NAVBAR */
+#header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    color: white;
+    width: 100%;
+
+}
+
+#header-subcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1200px, 100%);
+    padding: 20px;
+
+}
+
+#header-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+#navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar > li {
+    padding: 0 20px;
+}
+
+#navbar a, #navbar a:hover, #navbar a:focus, #navbar a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbar a:hover {
+    color: var(--gold);
+    cursor: pointer;
+}
+
+
+/* ======================================================= */
+/* START CONTAINER */
+#start-background {
+    background-image: url('./img/pizza.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+#start-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    padding: 25px 0;
+}
+
+.h-cursive-gold {
+    font-family: 'Dancing Script', cursive;
+    color: var(--gold);
+}
+
+#start-text > h1, #start-text > h2, #start-text > #start-telephone-container {
+    line-height: auto;
+}
+
+#start-text > h1 {
+    font-size: 5rem;
+    line-height: 70px;
+}
+
+#start-text > h2 {
+    font-size: 2.5rem;
+}
+
+#start-telephone-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-text > #start-telephone-container {
+    font-size: 2.5rem;
+    /* width: 2rem; */
+}
+
+#start-telephone-container > svg {
+    fill: white;
+    width: 2.5rem;
+}
+
+#menu {
+    background-color: var(--gold);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#menu:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+/* ======================================================= */
+/* MAIN CONTAINER */
+#main-container {
+    background-color: var(--gold-light);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#main-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    width: 100%;
+}
+
+#main-heading > img {
+    object-fit: cover;
+    object-position: center;
+    width: min(300px, 100%);
+    height: 32px;
+    
+}
+
+#separator {
+    width: min(90%, 75px);
+    height: 2px;
+    margin: 10px 0;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#main-heading > h2 {
+    font-size: 1.5rem;
+}
+
+#main-container > p {
+    width: min(900px, 100%);
+}
+
+
+
+
+/* ======================================================= */
+/* FOOTER */
+#footer {
+    text-align: center;
+    background-color: var(--dark);
+    padding: 3px;
+    color: white;
+}
