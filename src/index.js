@@ -1,2 +1,3 @@
-import './styles/style.css';
+import { startPageLoad, menuPageLoad } from "./load";
 
+startPageLoad();
