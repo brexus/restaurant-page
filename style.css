@@ -6,7 +6,7 @@
     --dark: rgb(46, 46, 46);
     --cream: #FFFDD0;
     --gold: #d4a13b;
-    --gold-light: #d8c194;
+    --gold-light: #e7e5e0;
 }
 
 * {
@@ -144,7 +144,7 @@ body {
     width: 2.5rem;
 }
 
-#menu {
+#menuBtn {
     background-color: var(--gold);
     color: white;
     border: 0;
@@ -155,7 +155,7 @@ body {
     margin-top: 30px;
 }
 
-#menu:hover {
+#menuBtn:hover {
     transform: scale(1.03);
     transition: 0.2s;
     cursor: pointer;
@@ -163,18 +163,90 @@ body {
 
 
 /* ======================================================= */
-/* MAIN CONTAINER */
+/* MENU CONTAINER */
 #main-container {
+    background-color: var(--gold-light);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+#main-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-heading > .separator {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: min(90%, 100px);
+    height: 3px;
+}
+
+#main-heading > h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    line-height: 45px;
+}
+
+#main-heading > h1 > span {
+    font-size: 2.5rem;
+}
+
+.menu-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container > div.separator {
+    margin: 20px 0;
+    height: 1px;
+
+}
+
+.menu-item-container > h2 {
+    color: var(--gold);
+}
+
+.menu-item-container > p {
+    width: min(700px, 100%);
+    padding: 0 20px;
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* ======================================================= */
+/* MAIN CONTAINER */
+/* #main-container {
     background-color: var(--gold-light);
     height: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center;
-}
+    /* align-items: center;
+} */
 
-#main-heading {
+/* #main-heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,23 +261,23 @@ body {
     width: min(300px, 100%);
     height: 32px;
     
-}
+} */
 
-#separator {
-    width: min(90%, 75px);
+.separator {
+    width: min(90%, 90px);
     height: 2px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     background-color: rgb(0, 0, 0);
     border-radius: 20px;
 }
 
-#main-heading > h2 {
+/* #main-heading > h2 {
     font-size: 1.5rem;
 }
 
 #main-container > p {
     width: min(900px, 100%);
-}
+} */
 
 
 
@@ -216,5 +288,5 @@ body {
     text-align: center;
     background-color: var(--dark);
     padding: 3px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
