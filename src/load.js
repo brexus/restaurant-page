@@ -109,7 +109,9 @@ function navbarListeners() {
 function checkMenuButtonListener() {
     const menuBtn = document.getElementById("menuBtn");
 
-    menuBtn.addEventListener("click", () => {});
+    menuBtn.addEventListener("click", () => {
+        menuPageLoad();
+    });
 }
 
 function startPageLoad() {
