@@ -201,7 +201,7 @@ body {
     font-size: 2.5rem;
 }
 
-.menu-item-container {
+.menu-item-container, .contact-item-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,17 +214,17 @@ body {
 
 }
 
-.menu-item-container > h2 {
+.menu-item-container > h2, .contact-item-container > h2 {
     color: var(--gold);
 }
 
-.menu-item-container > p {
+.menu-item-container > p, .contact-item-container > p {
     width: min(700px, 100%);
     padding: 0 20px;
     text-align: center;
 }
 
-.price {
+.price, .telephone {
     font-weight: bold;
 }
 
