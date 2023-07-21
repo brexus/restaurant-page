@@ -7,63 +7,55 @@ function clearPage() {
     mainContent.innerHTML = "";
 }
 
-
-function loadNavbar () {
-    // ========================================================
+function loadNavbar() {
     // main container id="content"
     const mainContent = document.getElementById("content");
 
-
-    // ========================================================
     // header = logo + navbar
-    const headerContainer = document.createElement('div');
+    const headerContainer = document.createElement("div");
     headerContainer.id = "header-container";
 
-    const headerSubcontainer = document.createElement('div');
+    const headerSubcontainer = document.createElement("div");
     headerSubcontainer.id = "header-subcontainer";
 
-    const headerLogoContainer = document.createElement('div');
+    const headerLogoContainer = document.createElement("div");
     headerLogoContainer.id = "header-logo-container";
 
-    const headerLogo = document.createElement('img');
+    const headerLogo = document.createElement("img");
     headerLogo.id = "header-logo";
     headerLogo.src = "./img/logo.png";
 
-
-    // ========================================================
     // navbar
-    const navbarContainer = document.createElement('nav');
+    const navbarContainer = document.createElement("nav");
     navbarContainer.id = "navbar-container";
 
-    const navbar = document.createElement('ul');
+    const navbar = document.createElement("ul");
     navbar.id = "navbar";
 
     // Start
-    const navbarStartLi = document.createElement('li');
-    const navbarStartA = document.createElement('a');
+    const navbarStartLi = document.createElement("li");
+    const navbarStartA = document.createElement("a");
     navbarStartA.id = "start";
     navbarStartA.innerText = "Start";
 
     // Menu
-    const navbarMenuLi = document.createElement('li');
-    const navbarMenuA = document.createElement('a');
+    const navbarMenuLi = document.createElement("li");
+    const navbarMenuA = document.createElement("a");
     navbarMenuA.id = "menu";
     navbarMenuA.innerText = "Menu";
 
     // About us
-    const navbarAboutUsLi = document.createElement('li');
-    const navbarAboutUsA = document.createElement('a');
+    const navbarAboutUsLi = document.createElement("li");
+    const navbarAboutUsA = document.createElement("a");
     navbarAboutUsA.innerText = "about-us";
     navbarAboutUsA.innerText = "About us";
 
     // Contact
-    const navbarContactLi = document.createElement('li');
-    const navbarContactA = document.createElement('a');
+    const navbarContactLi = document.createElement("li");
+    const navbarContactA = document.createElement("a");
     navbarContactA.id = "contact";
     navbarContactA.innerText = "Contact";
 
-
-    // ========================================================
     // APPEND CHILD
     headerLogoContainer.appendChild(headerLogo);
 
@@ -80,53 +72,45 @@ function loadNavbar () {
 
     headerSubcontainer.appendChild(headerLogoContainer);
     headerSubcontainer.appendChild(navbarContainer);
-    
+
     headerContainer.appendChild(headerSubcontainer);
 
     mainContent.appendChild(headerContainer);
-
-};
-
+}
 
 function loadFooter() {
     const mainContent = document.getElementById("content");
 
-    const footer = document.createElement('div');
+    const footer = document.createElement("div");
     footer.innerText = "Szymon Wierzchoś | 2023 Copyright ©";
-    footer.id = 'footer';
+    footer.id = "footer";
 
     mainContent.appendChild(footer);
-};
-
+}
 
 function navbarListeners() {
     const start = document.getElementById("start");
     const menu = document.getElementById("menu");
-    // const aboutUs = document.getElementById("about-us");
     const contact = document.getElementById("contact");
 
-    start.addEventListener('click', () => {
+    start.addEventListener("click", () => {
         startPageLoad();
     });
 
-    menu.addEventListener('click', () => {
+    menu.addEventListener("click", () => {
         menuPageLoad();
     });
 
-    contact.addEventListener('click', () => {
+    contact.addEventListener("click", () => {
         contactPageLoad();
     });
 }
 
-
 function checkMenuButtonListener() {
     const menuBtn = document.getElementById("menuBtn");
 
-    menuBtn.addEventListener('click', () => {
-        
-    });
+    menuBtn.addEventListener("click", () => {});
 }
-
 
 function startPageLoad() {
     clearPage();
