@@ -1,74 +1,5 @@
-
-function loadNavbar () {
-    // main container id="content"
-    const mainContent = document.getElementById("content");
-
-
-    // header = logo + navbar
-    const headerContainer = document.createElement('div');
-    headerContainer.id = "header-container";
-
-    const headerSubcontainer = document.createElement('div');
-    headerSubcontainer.id = "header-subcontainer";
-
-    const headerLogoContainer = document.createElement('div');
-    headerLogoContainer.id = "header-logo-container";
-
-    const headerLogo = document.createElement('img');
-    headerLogo.id = "header-logo";
-    headerLogo.src = "./img/logo.png";
-    
-
-    // navbar
-    const navbarContainer = document.createElement('nav');
-    navbarContainer.id = "navbar-container";
-
-    const navbar = document.createElement('ul');
-    navbar.id = "navbar";
-
-    const navbarStartLi = document.createElement('li');
-    const navbarStartA = document.createElement('a');
-    navbarStartA.innerText = "Start";
-
-    const navbarMenuLi = document.createElement('li');
-    const navbarMenuA = document.createElement('a');
-    navbarMenuA.innerText = "Menu";
-
-    const navbarAboutUsLi = document.createElement('li');
-    const navbarAboutUsA = document.createElement('a');
-    navbarAboutUsA.innerText = "About us";
-
-    const navbarContactLi = document.createElement('li');
-    const navbarContactA = document.createElement('a');
-    navbarContactA.innerText = "Contact";
-
-
-    // APPEND CHILD
-
-    headerLogoContainer.appendChild(headerLogo);
-
-    navbarStartLi.appendChild(navbarStartA);
-    navbarMenuLi.appendChild(navbarMenuA);
-    navbarAboutUsLi.appendChild(navbarAboutUsA);
-    navbarContactLi.appendChild(navbarContactA);
-
-    navbar.appendChild(navbarStartLi);
-    navbar.appendChild(navbarMenuLi);
-    navbar.appendChild(navbarAboutUsLi);
-    navbar.appendChild(navbarContactLi);
-    navbarContainer.appendChild(navbar);
-
-    headerSubcontainer.appendChild(headerLogoContainer);
-    headerSubcontainer.appendChild(navbarContainer);
-    
-    headerContainer.appendChild(headerSubcontainer);
-
-    mainContent.appendChild(headerContainer);
-
-};
-
-
 function loadStart() {
+    
     const mainContent = document.getElementById("content");
 
     const startBackground = document.createElement('div');
@@ -91,7 +22,7 @@ function loadStart() {
     h3.innerText = "543 683 045";
 
     const menuBtn = document.createElement('button');
-    menuBtn.id = "menu";
+    menuBtn.id = "menuBtn";
     menuBtn.innerText = "Check the menu";
 
     // APPEND CHILD
@@ -108,4 +39,5 @@ function loadStart() {
     mainContent.appendChild(startBackground);
 }
 
-export { loadNavbar, loadStart };
+
+export { loadStart };
