@@ -37,6 +37,7 @@ function loadStart() {
     startBackground.appendChild(startText);
 
     mainContent.appendChild(startBackground);
+
 }
 
 

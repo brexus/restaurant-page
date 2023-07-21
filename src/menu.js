@@ -19,9 +19,6 @@ function loadMenu() {
     mainHeading.appendChild(h1);
     mainHeading.appendChild(mainSeparator);
 
-    console.log(mainSeparator);
-    console.log(mainHeading);
-    
 
 
 

@@ -1,5 +1,6 @@
 import { loadStart } from "./start";
 import { loadMenu } from "./menu";
+import { loadContact } from "./contact";
 
 function clearPage() {
     const mainContent = document.getElementById("content");
@@ -102,7 +103,7 @@ function navbarListeners() {
     const start = document.getElementById("start");
     const menu = document.getElementById("menu");
     // const aboutUs = document.getElementById("about-us");
-    // const contact = document.getElementById("contact");
+    const contact = document.getElementById("contact");
 
     start.addEventListener('click', () => {
         startPageLoad();
@@ -111,7 +112,21 @@ function navbarListeners() {
     menu.addEventListener('click', () => {
         menuPageLoad();
     });
+
+    contact.addEventListener('click', () => {
+        contactPageLoad();
+    });
 }
+
+
+function checkMenuButtonListener() {
+    const menuBtn = document.getElementById("menuBtn");
+
+    menuBtn.addEventListener('click', () => {
+        
+    });
+}
+
 
 function startPageLoad() {
     clearPage();
@@ -125,6 +140,14 @@ function menuPageLoad() {
     clearPage();
     loadNavbar();
     loadMenu();
+    loadFooter();
+    navbarListeners();
+}
+
+function contactPageLoad() {
+    clearPage();
+    loadNavbar();
+    loadContact();
     loadFooter();
     navbarListeners();
 }
