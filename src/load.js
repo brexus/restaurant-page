@@ -44,11 +44,11 @@ function loadNavbar() {
     navbarMenuA.id = "menu";
     navbarMenuA.innerText = "Menu";
 
-    // About us
-    const navbarAboutUsLi = document.createElement("li");
-    const navbarAboutUsA = document.createElement("a");
-    navbarAboutUsA.innerText = "about-us";
-    navbarAboutUsA.innerText = "About us";
+    // // About us
+    // const navbarAboutUsLi = document.createElement("li");
+    // const navbarAboutUsA = document.createElement("a");
+    // navbarAboutUsA.innerText = "about-us";
+    // navbarAboutUsA.innerText = "About us";
 
     // Contact
     const navbarContactLi = document.createElement("li");
@@ -61,12 +61,12 @@ function loadNavbar() {
 
     navbarStartLi.appendChild(navbarStartA);
     navbarMenuLi.appendChild(navbarMenuA);
-    navbarAboutUsLi.appendChild(navbarAboutUsA);
+    // navbarAboutUsLi.appendChild(navbarAboutUsA);
     navbarContactLi.appendChild(navbarContactA);
 
     navbar.appendChild(navbarStartLi);
     navbar.appendChild(navbarMenuLi);
-    navbar.appendChild(navbarAboutUsLi);
+    // navbar.appendChild(navbarAboutUsLi);
     navbar.appendChild(navbarContactLi);
     navbarContainer.appendChild(navbar);
 
@@ -104,6 +104,11 @@ function navbarListeners() {
     contact.addEventListener("click", () => {
         contactPageLoad();
     });
+
+    const headerLogo = document.getElementById("header-logo");
+    headerLogo.addEventListener("click", () => {
+        startPageLoad();
+    });
 }
 
 function checkMenuButtonListener() {
@@ -120,6 +125,7 @@ function startPageLoad() {
     loadStart();
     loadFooter();
     navbarListeners();
+    checkMenuButtonListener();
 }
 
 function menuPageLoad() {
